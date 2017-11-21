@@ -15,15 +15,4 @@ var
 ;
 gulp.task('watch ui', watch);
 ```
-
-
-
-
-
-
-
-
-
-
-
 ### author: khadijah
