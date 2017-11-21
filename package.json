@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "dependencies": {
+    "bootstrap-select": "^1.12.4",
+    "semantic-ui": "^2.2.13",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-dropdown": "^2.2.12",
+    "semantic-ui-search": "^2.2.12",
+    "semantic-ui-transition": "^2.2.12"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

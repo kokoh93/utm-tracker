@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UTM Tracker</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets//css/search.min.css">
+        <link rel="stylesheet" href="assets//css/transition.min.css">
+        <link rel="stylesheet" href="assets//css/dropdown.min.css">
+        <link rel="stylesheet" href="assets//css/dropdown.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+       
+        <!-- JQuery -->
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <script src="dist/jquery.bootstrap-duallistbox.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../src/bootstrap-duallistbox.css">
+
+        <!--JavaScript-->
+
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/transition.min.js"></script>
+        <script src="assets/js/search.min.js"></script>
+        <script src="assets/js/dropdown.js"></script>
+        <script src="assets/js/scripts.js"></script>
+       
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->     
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
+                    	<form role="form" action="" method="post" class="f1">
+
+                    		<h3>UTM Tracker</h3>
+                    		<div class="f1-steps">
+                    			<div class="f1-progress">
+                    			    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                    			</div>
+                    			<div class="f1-step active">
+                    				<div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                    				<p>New Campaign</p>
+                    			</div>
+                    			<div class="f1-step">
+                    				<div class="f1-step-icon"><i class="fa fa-key"></i></div>
+                    				<p>Choose Channels</p>
+                    			</div>
+                    		    <div class="f1-step">
+                    				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+                    				<p>Web Check</p>
+                                </div>
+                                
+                    		</div>
+                    		
+                    		<fieldset>
+                    		    <h4>Enter New Campaign Name:</h4>
+                    			<div class="form-group">
+                    			    <label class="sr-only" for="f1-first-name">Campaign Name</label>
+                                    <input type="text" name="f1-first-name" placeholder="ex: glamFB.." class="f1-first-name form-control" id="f1-first-name">
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-next">Next</button>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                        <div class="form-group">
+                                                <form>
+                                                    search <input type="text" id="realtxt" onkeyup="javascript:searchSel();"/>
+                                                        <select id="realitems">
+                                                            <option value="">select...</option>
+                                                            <option value="1">Power hungry</option>
+                                                            <option value="2">Super man</option>
+                                                            <option value="3">Hyperactive</option>
+                                                            <option value="4">Bored</option>
+                                                            <option value="5">Human</option>
+                                                        </select>
+                                                </form> 
+                                            </div>     
+                                            
+                                            <script type="text/javascript">
+                                                document.getElementById('realtxt').onkeyup = searchSel;
+                                                function searchSel() 
+                                                    {
+                                                    var input = document.getElementById('realtxt').value.toLowerCase();
+                                                    
+                                                        len = input.length;
+                                                        output = document.getElementById('realitems').options;
+                                                    for(var i=0; i<output.length; i++)
+                                                        if (output[i].text.toLowerCase().indexOf(input) != -1 ){
+                                                        output[i].selected = true;
+                                                            break;
+                                                        }
+                                                    if (input == '')
+                                                        output[0].selected = true;
+                                                    }
+                                            </script>
+                                           
+                            
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">Previous</button>
+                                    <button type="button" class="btn btn-next">Next</button>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <h4>Enter website link:</h4>
+                                <div class="form-group">
+                                    <input id="webCheck" type="text" required>
+                                    <button onclick="webCheck()">Submit</button>
+                                    
+                                    <p>This will check if the website exists or not</p>
+                                    
+                                    <p id="demo"></p>
+                                    
+                                    <script>
+                                    //script goes here
+                                    </script>
+                                    
+                                    
+                                    
+                                    <!-- <label class="sr-only" for="f1-facebook">Facebook</label>
+                                    <input id="webCheck" type="text" placeholder="www.facebook.com/glaminc" class="f1-facebook form-control" required>
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-next" onclick="check()">Check </button>
+                                  -- check will be if website exists open website in another tab if not then ask them to re-enter website 
+                                    <script type = "text/javascript">
+                                    function check(){
+                                        var inpObj = document.getElementById("webCheck");
+                                        if (inpObj.checkValidity() == false) {
+                                            document.getElementById(".f1-buttons").innerHTML = inpObj.validationMessage;
+                                        } else {
+                                            document.getElementById(".f1-buttons").innerHTML = "Input OK";
+                                        } 
+                                   
+                                        /*var request;
+                                        if(window.XMLHttpRequest)
+                                            request = new XMLHttpRequest();
+                                        else
+                                            request = new ActiveXObject("Microsoft.XMLHTTP");
+                                        request.open('GET', 'http://www.mozilla.org', false);
+                                        request.send(); // there will be a 'pause' here until the response to come.
+                                        // the object request will be actually modified
+                                        if (request.status === 404) {
+                                            alert("The page you are trying to reach is not available.");
+                                        }*/ -->
+                                    }    
+                                    </script>
+                                   
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">Previous</button>
+                                    <button type="button" class="btn btn-next">Next</button>
+                                </div>
+                           
+                    	</form>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+
+
+        <!-- Javascript -->
+
+       
+   
+
+
+
+      
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
+
+
+
+ <!-- <div class="ui fluid search dropdown"> 
+                                                    <div class="ui-select">
+                                                        
+                                                        <div class="ui-btn ui-corner-all ui-shadow">
+                                                                <div class="ui search selection dropdown multiple">
+                                                                        <select multiple="" id="multi-select">
+                                                                                <option value="">State</option>
+                                                                                <option value="AL">Alabama</option>
+                                                                                <option value="AK">Alaska</option>
+                                                                                <option value="AZ">Arizona</option>
+                                                                                <option value="AR">Arkansas</option>
+                                                                                <option value="CA">California</option>
+                                                                                <option value="CO">Colorado</option>
+                                                                                <option value="CT">Connecticut</option>
+                                                                                <option value="DE">Delaware</option>
+                                                                                <option value="DC">District Of Columbia</option>
+                                                                    
+                                                                              </select>
+                                                                        This will receive comma separated value like OH,TX,WY !
+                                                                        <input class="search" autocomplete="off" tabindex="0" style="">                                                                        <i class="dropdown icon"></i>
+                                                                        <div class="menu">
+                                                                            <select id="multi-select" class="ui fluid search dropdown"> 
+                                                                            <div class="default text">States</div>
+                                                                            <div class="menu transition visible" tabindex="-1" style="display: block !important;">
+                                                                                <div class="item" data-value="AL">Alabama</div>
+                                                                                <div class="item" data-value="AK">Alaska</div>
+                                                                                <div class="item" data-value="AZ">Arizona</div>
+                                                                                <div class="item" data-value="AR">Arkansas</div>
+                                                                                <div class="item selected" data-value="CA">California</div>
+                                                                                <div class="item" data-value="CO">Colorado</div>
+                                                                                <div class="item" data-value="CT">Connecticut</div>
+                                                                                <div class="item" data-value="DE">Delaware</div>
+                                                                                <div class="item" data-value="DC">District Of Columbia</div>
+                                                                                </div>
+                                                                            </select>
+                                                                        </div>
+                                                                      </div>
+                                            
+                                                                        </div>
+                                                                            <div class="menu" tabindex="-1">
+                                                                                <div class="item" data-value="AL">Alabama</div>
+                                                                                <div class="item" data-value="AK">Alaska</div>
+                                                                                <div class="item" data-value="AZ">Arizona</div>
+                                                                                <div class="item" data-value="AR">Arkansas</div>
+                                                                                <div class="item" data-value="CA">California</div>
+                                                                                <div class="item" data-value="CO">Colorado</div>
+                                                                            </div>
+                                                                       </div>
+                              
+                                        <script type="text/javascript">
+                                            $('#multi-select')
+                                                .dropdown()
+                                                ;
+                                        </script> -->

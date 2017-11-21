@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        
+           
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Create New Channel</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="semantic/ui-search/search.min.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+        <style>
+        * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+        </style>
+    </head>
+
+    <body> 
+
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
+                    	<form role="form" action="" method="post" class="f1">
+
+                    		<h3>Create New Channel</h3>
+                    		
+                    	        <fieldset>
+                    		    <div class="form-group">
+                                               <p>Title:</p>
+                                                <label class="sr-only" for="f1-channel-title">Title</label>
+                                                <input type="text" name="f1-channel-title" placeholder="ex: FBPaid" class="f1-channel-title form-control" id="f1-channel-title">
+                                </div>
+                                <div class="form-group">
+                                        <p>Description::</p>
+                                        <label class="sr-only" for="f1-channel-description">Description</label>
+                                        <input type="text" name="f1-channel-description" placeholder="ex: This is a paid facebook AD" class="f1-channel-description form-control" id="f1-channel-description">
+                                </div>
+                                <div class="form-group">
+                                        <p>Channel Type:</p>
+                                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for channels.." title="Type in tags">
+                                        
+                                        <ul id="myUL">
+                                          <li><a href="#">FBPaid</a></li>
+                                          <li><a href="#">PINPaid</a></li>
+                                        
+                                          <li><a href="#">FB-NonPaid</a></li>
+                                          <li><a href="#">PIN-NonPaid</a></li>
+                                        
+                                          <li><a href="#">INSTAPaid</a></li>
+                                          <li><a href="#">INSTANONPaid</a></li>
+                                          
+                                        </ul>
+                                </div>   
+
+                                <script>
+                                       function myFunction() {
+                                        var input, filter, ul, li, a, i;
+                                        input = document.getElementById("myInput");
+                                        filter = input.value.toUpperCase();
+                                        ul = document.getElementById("myUL");
+                                        li = ul.getElementsByTagName("li");
+                                        for (i = 0; i < li.length; i++) {
+                                            a = li[i].getElementsByTagName("a")[0];
+                                            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                                li[i].style.display = "";
+                                            } else {
+                                                li[i].style.display = "none";
+
+                                            }
+                                        }
+                                    }
+                                       
+                                        /* function myFunction() {
+                                        var input, filter, ul, li, a, i;
+                                        input = document.getElementById("myInput");
+                                        filter = input.value.toUpperCase();
+                                        ul = document.getElementById("myUL");
+                                        li = ul.getElementsByTagName("li");
+                                        for (i = 0; i < li.length; i++) {
+                                            a = li[i].getElementsByTagName("a")[0];
+                                            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                                li[i].style.display = "";
+                                            } else {
+                                                li[i].style.display = "none";
+
+                                            }
+                                        }
+                                        } */
+                                </script> 
+                                
+                        
+                                  <!--next button --> 
+                                  <div class="f1-buttons">
+                                        <button type="button" class="btn btn-next">Next</button>
+                                  </div>
+                                </fieldset>
+
+                            </div>               
+                            
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="semantic/dist/semantic.min.js"></script>
+        <script src="semantic/ui-search/search.min.js"></script> 
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+     
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
